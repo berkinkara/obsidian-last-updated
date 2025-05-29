@@ -4,8 +4,8 @@
 	"version": "0.1.0",
 	"minAppVersion": "1.0.0",
 	"description": "Automatically updates a YAML field with the file's last modified time when saved.",
-	"author": "Last Updated Plugin",
-	"authorUrl": "",
+	"author": "Berkin Kara",
+	"authorUrl": "https://github.com/berkinkara",
 	"fundingUrl": "",
 	"isDesktopOnly": false
 }
