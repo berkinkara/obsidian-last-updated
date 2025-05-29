@@ -2,7 +2,7 @@
 	"id": "obsidian-last-updated",
 	"name": "Last Updated",
 	"version": "0.1.0",
-	"minAppVersion": "0.15.0",
+	"minAppVersion": "1.0.0",
 	"description": "Automatically updates a YAML field with the file's last modified time when saved.",
 	"author": "Last Updated Plugin",
 	"authorUrl": "",
