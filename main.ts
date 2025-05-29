@@ -126,7 +126,7 @@ export default class LastUpdatedPlugin extends Plugin {
             const newContent = this.serializeFrontmatter(frontmatter, originalFrontmatterText) + '\n' + body;
 
             await this.app.vault.modify(file, newContent);
-            new Notice(`Updated ${this.settings.fieldName} in ${file.name}`);
+            new Notice(`Updated field ${this.settings.fieldName} in ${file.name}`);
         } catch (error) {
             console.error('Error updating last modified:', error);
             new Notice('Error updating last modified field');
