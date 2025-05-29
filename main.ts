@@ -111,6 +111,11 @@ export default class LastUpdatedPlugin extends Plugin {
                 return;
             }
 
+            // Only update if the field already exists in the frontmatter
+            if (!(this.settings.fieldName in frontmatter)) {
+                return;
+            }
+
             // Update the last-updated field while preserving order
             const currentTimestamp = this.formatDate();
 
