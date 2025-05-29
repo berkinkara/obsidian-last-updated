@@ -2,14 +2,17 @@
 
 Automatically updates a YAML field (e.g., `last-updated`) with the file's last modified time every time a markdown file is saved in Obsidian.
 
+**Note**: This plugin only works with files that already have frontmatter. It will not create frontmatter for files that don't have it.
+
 ## Features
 
-- **Automatic Updates**: Automatically updates the specified YAML field when you save a markdown file
+- **Automatic Updates**: Automatically updates the specified YAML field when you save a markdown file that has frontmatter
 - **Master Switch**: Global enable/disable toggle for all automatic updates
 - **Per-File Control**: Enable or disable auto-updates for individual files using frontmatter
-- **Manual Updates**: Use commands to manually update the last-modified field
+- **Manual Updates**: Use commands to manually update the last-modified field (can create frontmatter if forced)
 - **Configurable Field Name**: Customize the YAML field name (default: `last-updated`)
 - **Multiple Date Formats**: Choose from different date formats (YYYY-MM-DD, YYYY-MM-DD HH:mm, YYYY-MM-DD HH:mm:ss, ISO)
+- **Smart Frontmatter Handling**: Only updates files with existing frontmatter, preserving files without frontmatter blocks
 
 ## Installation
 
@@ -86,10 +89,11 @@ last-updated: 2024-01-15 14:30:25
 
 ### Commands
 
-The plugin provides two commands accessible via the Command Palette (Ctrl/Cmd + P):
+The plugin provides three commands accessible via the Command Palette (Ctrl/Cmd + P):
 
 1. **Update last-updated field**: Manually update the last-modified field for the current file
 2. **Toggle auto-update for current file**: Toggle auto-update on/off for the current file
+3. **Toggle auto-update globally**: Toggle the master switch to enable/disable auto-updates for all files
 
 ## Examples
 
