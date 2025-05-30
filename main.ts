@@ -116,6 +116,16 @@ export default class LastUpdatedPlugin extends Plugin {
                 return;
             }
 
+            // Check if the field contains templated values and skip if it does
+            const currentValue = frontmatter[this.settings.fieldName];
+            if (typeof currentValue !== 'string') {
+                return; // Skip updating non-string fields
+            }
+
+            if (this.isTemplatedValue(currentValue)) {
+                return; // Skip updating templated fields
+            }
+
             // Update the last-updated field while preserving order
             const currentTimestamp = this.formatDate();
 
@@ -264,6 +274,16 @@ export default class LastUpdatedPlugin extends Plugin {
         this.settings.autoUpdateEnabled = !this.settings.autoUpdateEnabled;
         await this.saveSettings();
         new Notice(`Auto-update globally ${this.settings.autoUpdateEnabled ? 'enabled' : 'disabled'}`);
+    }
+
+    private isTemplatedValue(value: string): boolean {
+        // Check for {{ }} template syntax (Handlebars, Mustache, etc.)
+        const handlebarsPattern = /\{\{.*\}\}/;
+
+        // Check for <% %> template syntax (EJS, ERB, etc.)
+        const ejsPattern = /<%.+%>/;
+
+        return handlebarsPattern.test(value) || ejsPattern.test(value);
     }
 }
 
