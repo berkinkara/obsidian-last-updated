@@ -44,8 +44,8 @@ export default class LastUpdatedPlugin extends Plugin {
         });
 
         this.addCommand({
-            id: 'toggle-auto-update-globally',
-            name: 'Toggle auto-update globally',
+            id: 'toggle-auto-update-for-all-files',
+            name: 'Toggle auto-update for all files',
             callback: () => {
                 this.toggleAutoUpdateGlobally();
             }
