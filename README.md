@@ -166,14 +166,14 @@ This will watch for changes and automatically rebuild the plugin.
 - `styles.css` - Plugin styles
 - `package.json` - Node.js dependencies and scripts
 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+## Contact / Maintainer Info
 
-If you encounter any issues or have feature requests, please [create an issue](https://github.com/your-username/obsidian-last-updated/issues) on GitHub.
+- **Maintainer**: [github.com/berkinkara](https://github.com/berkinkara)
+> **Note**: This plugin is currently in development (v0.1.0). It will be submitted to the Obsidian Community Plugins directory once it reaches a stable release.
 
 ## Changelog
 
